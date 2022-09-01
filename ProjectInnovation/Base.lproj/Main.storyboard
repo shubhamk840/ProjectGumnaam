@@ -53,10 +53,66 @@
                     <view key="view" contentMode="scaleToFill" id="NUL-9K-K1L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFs-CO-KpA">
+                                <rect key="frame" x="125.5" y="121" width="163" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkF-jQ-dZG">
+                                <rect key="frame" x="26" y="195" width="119.5" height="24"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Name of Task">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14j-4o-lDL">
+                                <rect key="frame" x="26" y="229" width="362" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="LYV-F1-xzZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0g-pA-D7I">
+                                <rect key="frame" x="47" y="707" width="320" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="JTN-Y6-9oq"/>
+                                    <constraint firstAttribute="height" constant="56" id="Yaz-yR-vDq"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Task">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iKo-YA-1UH"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XFs-CO-KpA" firstAttribute="top" secondItem="iKo-YA-1UH" secondAttribute="top" constant="33" id="7uu-Th-gVj"/>
+                            <constraint firstItem="HkF-jQ-dZG" firstAttribute="top" secondItem="XFs-CO-KpA" secondAttribute="bottom" constant="50" id="9bX-lx-wjS"/>
+                            <constraint firstItem="HkF-jQ-dZG" firstAttribute="leading" secondItem="iKo-YA-1UH" secondAttribute="leading" constant="26" id="HJH-yE-tQv"/>
+                            <constraint firstItem="14j-4o-lDL" firstAttribute="top" secondItem="HkF-jQ-dZG" secondAttribute="bottom" constant="10" id="JI0-2d-hR6"/>
+                            <constraint firstItem="XFs-CO-KpA" firstAttribute="centerX" secondItem="iKo-YA-1UH" secondAttribute="centerX" id="Pg3-RO-w4w"/>
+                            <constraint firstItem="14j-4o-lDL" firstAttribute="leading" secondItem="HkF-jQ-dZG" secondAttribute="leading" id="boD-qa-4G6"/>
+                            <constraint firstItem="iKo-YA-1UH" firstAttribute="trailing" secondItem="14j-4o-lDL" secondAttribute="trailing" constant="26" id="ftS-gx-UcK"/>
+                            <constraint firstItem="H0g-pA-D7I" firstAttribute="centerX" secondItem="iKo-YA-1UH" secondAttribute="centerX" id="qdK-nc-qAd"/>
+                            <constraint firstItem="iKo-YA-1UH" firstAttribute="bottom" secondItem="H0g-pA-D7I" secondAttribute="bottom" constant="50" id="vWE-Xa-xSK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gng-km-sAe"/>
+                    <connections>
+                        <outlet property="addButton" destination="H0g-pA-D7I" id="PuC-ib-Vw8"/>
+                        <outlet property="createNewTask" destination="XFs-CO-KpA" id="vyx-M5-VC9"/>
+                        <outlet property="nameOfTask" destination="HkF-jQ-dZG" id="XG7-KO-5w5"/>
+                        <outlet property="nameOfTaskField" destination="14j-4o-lDL" id="Qph-se-rWA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCN-Kt-H1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,9 +263,6 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
