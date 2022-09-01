@@ -11,7 +11,7 @@
 		2288AF9819CEC24111F61752 /* Pods_ProjectInnovationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBD1BEE462EEDC34F553F97 /* Pods_ProjectInnovationTests.framework */; };
 		4E5EBD9828BB4E9A00BA55CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9728BB4E9A00BA55CD /* AppDelegate.swift */; };
 		4E5EBD9A28BB4E9A00BA55CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9928BB4E9A00BA55CD /* SceneDelegate.swift */; };
-		4E5EBD9C28BB4E9A00BA55CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9B28BB4E9A00BA55CD /* ViewController.swift */; };
+		4E5EBD9C28BB4E9A00BA55CD /* ThirdScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9B28BB4E9A00BA55CD /* ThirdScreenViewController.swift */; };
 		4E5EBD9F28BB4E9A00BA55CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9D28BB4E9A00BA55CD /* Main.storyboard */; };
 		4E5EBDA228BB4E9A00BA55CD /* ProjectInnovation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBDA028BB4E9A00BA55CD /* ProjectInnovation.xcdatamodeld */; };
 		4E5EBDA428BB4E9A00BA55CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5EBDA328BB4E9A00BA55CD /* Assets.xcassets */; };
@@ -24,6 +24,9 @@
 		4E5EBDD728BB5FA600BA55CD /* ApiEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBDD628BB5FA600BA55CD /* ApiEndPoints.swift */; };
 		4E5EBDDA28BB813F00BA55CD /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBDD928BB813F00BA55CD /* DataModels.swift */; };
 		4E5EBDDF28BBB33700BA55CD /* ActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBDDE28BBB33700BA55CD /* ActivitySpinner.swift */; };
+		4E63244628C14BA200466C31 /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63244528C14BA200466C31 /* MyTabBarViewController.swift */; };
+		4E63244928C14FD800466C31 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63244828C14FD800466C31 /* FirstScreenViewController.swift */; };
+		4E63244B28C14FED00466C31 /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63244A28C14FED00466C31 /* SecondScreenViewController.swift */; };
 		AFBC97BF0F0803109A8990BF /* Pods_ProjectInnovation_ProjectInnovationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7FA76E0295AE927262DD4C /* Pods_ProjectInnovation_ProjectInnovationUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +53,7 @@
 		4E5EBD9428BB4E9A00BA55CD /* ProjectInnovation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectInnovation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5EBD9728BB4E9A00BA55CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E5EBD9928BB4E9A00BA55CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E5EBD9B28BB4E9A00BA55CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E5EBD9B28BB4E9A00BA55CD /* ThirdScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenViewController.swift; sourceTree = "<group>"; };
 		4E5EBD9E28BB4E9A00BA55CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E5EBDA128BB4E9A00BA55CD /* ProjectInnovation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectInnovation.xcdatamodel; sourceTree = "<group>"; };
 		4E5EBDA328BB4E9A00BA55CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +69,9 @@
 		4E5EBDD628BB5FA600BA55CD /* ApiEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndPoints.swift; sourceTree = "<group>"; };
 		4E5EBDD928BB813F00BA55CD /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		4E5EBDDE28BBB33700BA55CD /* ActivitySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySpinner.swift; sourceTree = "<group>"; };
+		4E63244528C14BA200466C31 /* MyTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
+		4E63244828C14FD800466C31 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		4E63244A28C14FED00466C31 /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
 		684250AA4242D73B03F16C18 /* Pods-ProjectInnovationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovationTests.release.xcconfig"; path = "Target Support Files/Pods-ProjectInnovationTests/Pods-ProjectInnovationTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A778B13FC04F78276DD9647 /* Pods-ProjectInnovation-ProjectInnovationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovation-ProjectInnovationUITests.release.xcconfig"; path = "Target Support Files/Pods-ProjectInnovation-ProjectInnovationUITests/Pods-ProjectInnovation-ProjectInnovationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E0D4A93F4354541F18E7D07 /* Pods-ProjectInnovation-ProjectInnovationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovation-ProjectInnovationUITests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectInnovation-ProjectInnovationUITests/Pods-ProjectInnovation-ProjectInnovationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +140,6 @@
 				4E5EBDCA28BB4F4500BA55CD /* Controllers */,
 				4E5EBD9728BB4E9A00BA55CD /* AppDelegate.swift */,
 				4E5EBD9928BB4E9A00BA55CD /* SceneDelegate.swift */,
-				4E5EBD9B28BB4E9A00BA55CD /* ViewController.swift */,
 				4E5EBD9D28BB4E9A00BA55CD /* Main.storyboard */,
 				4E5EBDA328BB4E9A00BA55CD /* Assets.xcassets */,
 				4E5EBDA528BB4E9A00BA55CD /* LaunchScreen.storyboard */,
@@ -165,6 +170,10 @@
 			isa = PBXGroup;
 			children = (
 				4E5EBDCF28BB529200BA55CD /* MainScreenViewController.swift */,
+				4E63244528C14BA200466C31 /* MyTabBarViewController.swift */,
+				4E63244828C14FD800466C31 /* FirstScreenViewController.swift */,
+				4E5EBD9B28BB4E9A00BA55CD /* ThirdScreenViewController.swift */,
+				4E63244A28C14FED00466C31 /* SecondScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -456,14 +465,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E63244B28C14FED00466C31 /* SecondScreenViewController.swift in Sources */,
 				4E5EBDD028BB529200BA55CD /* MainScreenViewController.swift in Sources */,
 				4E5EBDDA28BB813F00BA55CD /* DataModels.swift in Sources */,
 				4E5EBDD528BB5D4800BA55CD /* Services.swift in Sources */,
 				4E5EBDD728BB5FA600BA55CD /* ApiEndPoints.swift in Sources */,
-				4E5EBD9C28BB4E9A00BA55CD /* ViewController.swift in Sources */,
+				4E5EBD9C28BB4E9A00BA55CD /* ThirdScreenViewController.swift in Sources */,
 				4E5EBD9828BB4E9A00BA55CD /* AppDelegate.swift in Sources */,
 				4E5EBDDF28BBB33700BA55CD /* ActivitySpinner.swift in Sources */,
 				4E5EBDA228BB4E9A00BA55CD /* ProjectInnovation.xcdatamodeld in Sources */,
+				4E63244628C14BA200466C31 /* MyTabBarViewController.swift in Sources */,
+				4E63244928C14FD800466C31 /* FirstScreenViewController.swift in Sources */,
 				4E5EBD9A28BB4E9A00BA55CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -52,5 +52,114 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94D4D86B-7D50-4EFB-B46B-CD2A32C09404"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectInnovation/Controllers/MyTabBarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "MyTabBarViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "94D4D86B-7D50-4EFB-B46B-CD2A32C09404 - dd4c945289eb418b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectInnovation.MyTabBarViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProjectInnovation.MyTabBarViewController"
+                  moduleName = "ProjectInnovation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamkushwaha/Desktop/ProjectInnovation/ProjectInnovation/Controllers/MyTabBarViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "94D4D86B-7D50-4EFB-B46B-CD2A32C09404 - 3148b703c64c3ea8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectInnovation.MyTabBarViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProjectInnovation.MyTabBarViewController"
+                  moduleName = "ProjectInnovation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamkushwaha/Desktop/ProjectInnovation/ProjectInnovation/Controllers/MyTabBarViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "94D4D86B-7D50-4EFB-B46B-CD2A32C09404 - 30a8a61e2b028718"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectInnovation.MyTabBarViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProjectInnovation.MyTabBarViewController&gt;"
+                  moduleName = "ProjectInnovation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamkushwaha/Desktop/ProjectInnovation/ProjectInnovation/Controllers/MyTabBarViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "94D4D86B-7D50-4EFB-B46B-CD2A32C09404 - a82e74ed41eef6e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectInnovation.MyTabBarViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProjectInnovation.MyTabBarViewController&gt;"
+                  moduleName = "ProjectInnovation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamkushwaha/Desktop/ProjectInnovation/ProjectInnovation/Controllers/MyTabBarViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "94D4D86B-7D50-4EFB-B46B-CD2A32C09404 - f16d61f3fe298f34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectInnovation.MyTabBarViewController.__deallocating_deinit"
+                  moduleName = "ProjectInnovation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubhamkushwaha/Desktop/ProjectInnovation/ProjectInnovation/Controllers/MyTabBarViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8794EAE5-E893-4EE0-8D9D-85B463962806"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectInnovation/Controllers/MyTabBarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ThirdScreenViewController: UIViewController {
 
     @IBOutlet weak var clickMe: UIButton!
     override func viewDidLoad() {
