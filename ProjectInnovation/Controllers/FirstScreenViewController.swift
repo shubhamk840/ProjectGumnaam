@@ -51,12 +51,7 @@ class FirstScreenViewController: UIViewController, UITableViewDataSource, UITabl
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CardsTableViewCell", for: indexPath) as! CardsTableViewCell
-            cell.backgroundColor = .white
-            cell.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-            cell.layer.cornerRadius = 8
-            cell.layer.borderWidth = 1
-            cell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+            let cell = setupCellLook(indexPath: indexPath)
             return cell
         }
     }
