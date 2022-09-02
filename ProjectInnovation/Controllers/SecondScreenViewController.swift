@@ -28,6 +28,7 @@ class SecondScreenViewController: UIViewController {
     @IBOutlet weak var descriptionField: UITextField!
     @IBOutlet weak var personalNotes: UITextField!
     @IBOutlet weak var watcher: UITextField!
+    @IBOutlet weak var dateField: UITextField!
     
     var searching = false
     var itemforassign = ["sad","sasdasd","wefe","sededad","dsasdasd","xwefe"]
@@ -64,7 +65,6 @@ class SecondScreenViewController: UIViewController {
         view2.frame = CGRect(x: 0, y: 0, width: 55, height: 25)
         view2.backgroundColor = .white
         view2.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        view2.font = UIFont(name: "OpenSans-Regular", size: 12)
 
         var paragraphStyle = NSMutableParagraphStyle()
 
@@ -96,7 +96,7 @@ class SecondScreenViewController: UIViewController {
         dropDown.anchorView = dropDownView
         dropDown.dataSource = dropDownValues
         priorityDropDown.addTarget(self, action: #selector(showPriority), for: .touchDown)
-        
+        addButton.addTarget(self, action: #selector(creatingTask), for: .touchDown)
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.priorityLable.text = item
         }
@@ -104,6 +104,17 @@ class SecondScreenViewController: UIViewController {
         
         setupUI()
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func creatingTask(sender: Any) {
+        var desc = [String : String]()
+        desc["priority"] = priorityLable.text
+        desc["assignee"] = assignToFiedl.text
+        desc["taskTitle"] = nameOfTaskField.text
+        desc["Description"] = descriptionField.text
+//        desc["dueDate"] =
+        desc["taskCreater"] = dateField.text
+        
     }
     
     @objc func showPriority(sender: Any) {

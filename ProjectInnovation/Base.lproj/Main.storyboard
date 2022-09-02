@@ -207,6 +207,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD/MM/YY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eN8-85-PJi">
+                                <rect key="frame" x="202" y="290" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iKo-YA-1UH"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -223,6 +228,7 @@
                             <constraint firstItem="iKo-YA-1UH" firstAttribute="trailing" secondItem="HkF-jQ-dZG" secondAttribute="trailing" constant="26" id="9Xr-Z0-KyO"/>
                             <constraint firstItem="3RO-yC-Ryj" firstAttribute="top" secondItem="Wdp-VW-0cI" secondAttribute="bottom" constant="7" id="Aom-Hc-m9Y"/>
                             <constraint firstItem="HkF-jQ-dZG" firstAttribute="leading" secondItem="iKo-YA-1UH" secondAttribute="leading" constant="26" id="HJH-yE-tQv"/>
+                            <constraint firstItem="iKo-YA-1UH" firstAttribute="trailing" secondItem="eN8-85-PJi" secondAttribute="trailing" constant="26" id="Hb9-Mk-u50"/>
                             <constraint firstItem="o4S-VW-bDE" firstAttribute="leading" secondItem="iKo-YA-1UH" secondAttribute="leading" constant="26" id="IDd-1O-LXR"/>
                             <constraint firstItem="Wdp-VW-0cI" firstAttribute="top" secondItem="o4S-VW-bDE" secondAttribute="bottom" constant="15" id="MlX-4o-r7y"/>
                             <constraint firstItem="iKo-YA-1UH" firstAttribute="trailing" secondItem="toH-AL-ssx" secondAttribute="trailing" constant="26" id="NRW-U9-MjX"/>
@@ -233,6 +239,7 @@
                             <constraint firstItem="Wdp-VW-0cI" firstAttribute="leading" secondItem="iKo-YA-1UH" secondAttribute="leading" constant="26" id="TKj-f9-Vxt"/>
                             <constraint firstItem="iKo-YA-1UH" firstAttribute="trailing" secondItem="o4S-VW-bDE" secondAttribute="trailing" constant="26" id="Vck-4p-TSw"/>
                             <constraint firstItem="iKo-YA-1UH" firstAttribute="bottom" secondItem="Gd9-4l-ZzC" secondAttribute="bottom" constant="26" id="Xfq-jY-OuS"/>
+                            <constraint firstItem="eN8-85-PJi" firstAttribute="leading" secondItem="Vff-Ly-eZZ" secondAttribute="trailing" constant="26" id="ZkL-EH-W1P"/>
                             <constraint firstItem="14j-4o-lDL" firstAttribute="top" secondItem="HkF-jQ-dZG" secondAttribute="bottom" constant="5" id="bhD-oy-u7D"/>
                             <constraint firstItem="5gr-kI-Bsb" firstAttribute="leading" secondItem="iKo-YA-1UH" secondAttribute="leading" constant="26" id="bka-an-Um0"/>
                             <constraint firstItem="toH-AL-ssx" firstAttribute="leading" secondItem="iKo-YA-1UH" secondAttribute="leading" constant="26" id="eBG-BU-yJQ"/>
@@ -240,6 +247,7 @@
                             <constraint firstItem="iKo-YA-1UH" firstAttribute="trailing" secondItem="14j-4o-lDL" secondAttribute="trailing" constant="26" id="ftS-gx-UcK"/>
                             <constraint firstItem="o4S-VW-bDE" firstAttribute="top" secondItem="UCw-z0-4OO" secondAttribute="bottom" constant="7" id="hRS-U7-hTN"/>
                             <constraint firstItem="iKo-YA-1UH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Vff-Ly-eZZ" secondAttribute="trailing" symbolic="YES" id="iyg-5B-veR"/>
+                            <constraint firstItem="Vff-Ly-eZZ" firstAttribute="bottom" secondItem="eN8-85-PJi" secondAttribute="bottom" id="jVj-nc-RRo"/>
                             <constraint firstItem="iKo-YA-1UH" firstAttribute="trailing" secondItem="xiJ-aT-1r7" secondAttribute="trailing" constant="26" id="mBi-p0-4Oa"/>
                             <constraint firstItem="Gd9-4l-ZzC" firstAttribute="leading" secondItem="iKo-YA-1UH" secondAttribute="leading" constant="55" id="n6b-QT-k1w"/>
                             <constraint firstItem="iKo-YA-1UH" firstAttribute="trailing" secondItem="Ywg-Ro-lB7" secondAttribute="trailing" constant="150" id="nd9-d3-gG6"/>
@@ -260,6 +268,7 @@
                         <outlet property="assignTableView" destination="y1X-Jm-RLs" id="Cw5-w4-lGn"/>
                         <outlet property="assignTo" destination="w09-1N-6oS" id="TMR-6w-Bxc"/>
                         <outlet property="assignToFiedl" destination="5gr-kI-Bsb" id="98Z-UR-gEZ"/>
+                        <outlet property="dateField" destination="eN8-85-PJi" id="xcb-Vf-hGG"/>
                         <outlet property="descriptionField" destination="toH-AL-ssx" id="aMU-yZ-43f"/>
                         <outlet property="dropDownView" destination="Ywg-Ro-lB7" id="Wzb-0T-LMq"/>
                         <outlet property="nameOfTask" destination="HkF-jQ-dZG" id="XG7-KO-5w5"/>
