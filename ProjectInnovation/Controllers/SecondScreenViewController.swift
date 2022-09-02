@@ -28,6 +28,7 @@ class SecondScreenViewController: UIViewController {
     @IBOutlet weak var descriptionField: UITextField!
     @IBOutlet weak var personalNotes: UITextField!
     @IBOutlet weak var watcher: UITextField!
+    @IBOutlet weak var dateField: UITextField!
     
     var searching = false
     var itemforassign = ["sad","sasdasd","wefe","sededad","dsasdasd","xwefe"]
@@ -38,38 +39,32 @@ class SecondScreenViewController: UIViewController {
     
     func setupUI() {
         
-        
-        let view = nameOfTask!
-        view.frame = CGRect(x: 0, y: 0, width: 27, height: 25)
-        view.backgroundColor = .white
-        view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        self.navigationController?.isNavigationBarHidden = true
-
-        let view1 = nameOfTaskField!
-        view1.frame = CGRect(x: 0, y: 0, width: 363, height: 51)
-        view1.backgroundColor = .white
-        view1.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-        view1.layer.cornerRadius = 5
-        view1.layer.borderWidth = 0.5
-        view1.layer.borderColor = UIColor(red: 0.762, green: 0.75, blue: 0.75, alpha: 1).cgColor
-        let parent = self.view!
-        view1.addSubview(view)
-        view1.translatesAutoresizingMaskIntoConstraints = false
-        view1.widthAnchor.constraint(equalToConstant: 363).isActive = true
-        view.heightAnchor.constraint(equalToConstant: 51).isActive = true
-        view1.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 24).isActive = true
-        view1.topAnchor.constraint(equalTo: parent.topAnchor, constant: 128).isActive = true
-        
-        let view2 = assignTo!
-        view2.frame = CGRect(x: 0, y: 0, width: 55, height: 25)
-        view2.backgroundColor = .white
-        view2.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        view2.font = UIFont(name: "OpenSans-Regular", size: 12)
-
-        var paragraphStyle = NSMutableParagraphStyle()
-
-        paragraphStyle.lineHeightMultiple = 1.96
-        
+//        let view = nameOfTask!
+//        view.frame = CGRect(x: 0, y: 0, width: 27, height: 25)
+//        view.backgroundColor = .white
+//        view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+//        self.navigationController?.isNavigationBarHidden = true
+//
+//        let view1 = nameOfTaskField!
+//        view1.frame = CGRect(x: 0, y: 0, width: 363, height: 51)
+//        view1.backgroundColor = .white
+//        view1.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+//        view1.layer.cornerRadius = 5
+//        view1.layer.borderWidth = 0.5
+//        view1.layer.borderColor = UIColor(red: 0.762, green: 0.75, blue: 0.75, alpha: 1).cgColor
+//        let parent = self.view!
+//        view1.addSubview(view)
+//        view1.translatesAutoresizingMaskIntoConstraints = false
+//        view1.widthAnchor.constraint(equalToConstant: 363).isActive = true
+//        view.heightAnchor.constraint(equalToConstant: 51).isActive = true
+//        view1.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 24).isActive = true
+//        view1.topAnchor.constraint(equalTo: parent.topAnchor, constant: 128).isActive = true
+//
+//        let view2 = assignTo!
+//        view2.frame = CGRect(x: 0, y: 0, width: 55, height: 25)
+//        view2.backgroundColor = .white
+//        view2.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+//
         
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth = screenSize.width
@@ -88,6 +83,7 @@ class SecondScreenViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.layer.backgroundColor = UIColor(red: 0.929, green: 0.952, blue: 1, alpha: 1).cgColor
         self.navigationItem.title = "Create new task"
         self.assignTableView.isHidden = true
         assignToFiedl.delegate = self
@@ -96,7 +92,7 @@ class SecondScreenViewController: UIViewController {
         dropDown.anchorView = dropDownView
         dropDown.dataSource = dropDownValues
         priorityDropDown.addTarget(self, action: #selector(showPriority), for: .touchDown)
-        
+        addButton.addTarget(self, action: #selector(creatingTask), for: .touchDown)
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.priorityLable.text = item
         }
@@ -104,6 +100,17 @@ class SecondScreenViewController: UIViewController {
         
         setupUI()
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func creatingTask(sender: Any) {
+        var desc = [String : String]()
+        desc["priority"] = priorityLable.text
+        desc["assignee"] = assignToFiedl.text
+        desc["taskTitle"] = nameOfTaskField.text
+        desc["Description"] = descriptionField.text
+//        desc["dueDate"] =
+        desc["taskCreater"] = dateField.text
+        
     }
     
     @objc func showPriority(sender: Any) {
