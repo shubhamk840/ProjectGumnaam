@@ -12,7 +12,7 @@ struct DogsData: Decodable {
     var status: String?
     
     enum CodingKeys: String, CodingKey {
-        case message = "message"
-        case status = "status"
+        case message = "task-title"
+        case status = "statusDesc"
     }
 }

@@ -286,16 +286,16 @@
                                 <rect key="frame" x="0.0" y="88" width="428" height="755"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aeJ-h6-L6V">
-                                        <rect key="frame" x="0.0" y="50" width="428" height="705"/>
+                                        <rect key="frame" x="10" y="50" width="408" height="705"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="aeJ-h6-L6V" secondAttribute="trailing" id="Aq1-TU-Cx2"/>
-                                    <constraint firstItem="aeJ-h6-L6V" firstAttribute="leading" secondItem="wxx-Uu-JhT" secondAttribute="leading" id="X6C-D1-MMR"/>
                                     <constraint firstItem="aeJ-h6-L6V" firstAttribute="top" secondItem="wxx-Uu-JhT" secondAttribute="top" constant="50" id="XmH-fn-UE1"/>
                                     <constraint firstAttribute="bottom" secondItem="aeJ-h6-L6V" secondAttribute="bottom" id="eWP-rB-PI8"/>
+                                    <constraint firstAttribute="trailing" secondItem="aeJ-h6-L6V" secondAttribute="trailing" constant="10" id="ith-za-kkX"/>
+                                    <constraint firstItem="aeJ-h6-L6V" firstAttribute="leading" secondItem="wxx-Uu-JhT" secondAttribute="leading" constant="10" id="n75-bT-h8u"/>
                                 </constraints>
                             </view>
                         </subviews>
