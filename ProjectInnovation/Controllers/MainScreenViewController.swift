@@ -18,15 +18,15 @@ class MainScreenViewController: UIViewController {
         imageView.isUserInteractionEnabled = false
         makeApiCall()
     }
+   
     
     func makeApiCall() {
         SVProgressHUD.show(currentViewController: self)
-        let Services = Services(baseUrl: "https://dog.ceo/api/breeds/image/random")
+        let Services = Services(baseUrl: "https://peer-task-track.herokuapp.com/auth/dummy/")
         Services.getAllCountriesName(endPoint: "",onSuccess: {
             (dogsData) in
             SVProgressHUD.dismiss(currentViewController: self)
-            let url = URL(string: dogsData.message ?? "")!
-            self.downloadImage(from: url)
+            
         }, onFailure : {
             (error) in
             self.imageView.image = UIImage(named:"errorImage")
