@@ -13,7 +13,7 @@ class LoginScreenViewController: UIViewController {
     @IBOutlet weak var emailId: UITextField!
     
     @IBAction func signinBtnClicked(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "TaskScreenViewController") as! TaskScreenViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
