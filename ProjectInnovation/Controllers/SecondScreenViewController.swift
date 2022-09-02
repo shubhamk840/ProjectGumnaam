@@ -26,6 +26,8 @@ class SecondScreenViewController: UIViewController {
     @IBOutlet weak var priorityLable: UILabel!
     @IBOutlet weak var selectDueDate: UIButton!
     @IBOutlet weak var descriptionField: UITextField!
+    @IBOutlet weak var personalNotes: UITextField!
+    @IBOutlet weak var watcher: UITextField!
     
     var searching = false
     var itemforassign = ["sad","sasdasd","wefe","sededad","dsasdasd","xwefe"]
@@ -41,7 +43,8 @@ class SecondScreenViewController: UIViewController {
         view.frame = CGRect(x: 0, y: 0, width: 27, height: 25)
         view.backgroundColor = .white
         view.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        
+        self.navigationController?.isNavigationBarHidden = true
+
         let view1 = nameOfTaskField!
         view1.frame = CGRect(x: 0, y: 0, width: 363, height: 51)
         view1.backgroundColor = .white
@@ -80,14 +83,16 @@ class SecondScreenViewController: UIViewController {
         addButton.layer.cornerRadius = 8
         
         assignToFiedl.addTarget(self, action: #selector(searchAssign), for: .editingChanged)
-        
+        watcher.addTarget(self, action: #selector(searchAssign), for: .editingChanged)
        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Create a New Task"
+        self.navigationItem.title = "Create new task"
         self.assignTableView.isHidden = true
         assignToFiedl.delegate = self
+        watcher.delegate = self
+        
         dropDown.anchorView = dropDownView
         dropDown.dataSource = dropDownValues
         priorityDropDown.addTarget(self, action: #selector(showPriority), for: .touchDown)
@@ -100,53 +105,10 @@ class SecondScreenViewController: UIViewController {
         setupUI()
         // Do any additional setup after loading the view.
     }
-    @IBAction func datePicker(_ sender: Any) {
-        datePicker = UIDatePicker.init()
-        datePicker.backgroundColor = UIColor.white
-                
-        datePicker.autoresizingMask = .flexibleWidth
-        datePicker.datePickerMode = .date
-                
-        datePicker.addTarget(self, action: #selector(self.dateChanged(_:)), for: .valueChanged)
-        datePicker.frame = CGRect(x: 0.0, y: UIScreen.main.bounds.size.height - 300, width: UIScreen.main.bounds.size.width, height: 300)
-        self.view.addSubview(datePicker)
-                
-        toolBar = UIToolbar(frame: CGRect(x: 0, y: UIScreen.main.bounds.size.height - 300, width: UIScreen.main.bounds.size.width, height: 50))
-        toolBar.barStyle = .blackTranslucent
-        toolBar.items = [UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil), UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.onDoneButtonClick))]
-        toolBar.sizeToFit()
-        self.view.addSubview(toolBar)
-    }
-    
-    @objc func dateChanged(_ sender: UIDatePicker?) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
-        dateFormatter.timeStyle = .none
-            
-        if let date = sender?.date {
-            print("Picked the date \(dateFormatter.string(from: date))")
-        }
-    }
-
-    @objc func onDoneButtonClick() {
-        toolBar.removeFromSuperview()
-        datePicker.removeFromSuperview()
-    }
     
     @objc func showPriority(sender: Any) {
         dropDown.show()
     }
-    
-//    @State private var date = Date()
-//
-//    var body: some View {
-//        DatePicker(
-//            "Start Date",
-//            selection: $date,
-//            displayedComponents: [.date]
-//        )
-//        .datePickerStyle(.graphical)
-//    }
     
     @objc func searchAssign(sender: UITextField)
     {
@@ -217,6 +179,7 @@ extension SecondScreenViewController: UITableViewDelegate, UITableViewDataSource
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         self.assignTableView.isHidden = false
+        self.view.bringSubviewToFront(assignTableView)
         return true
     }
     
