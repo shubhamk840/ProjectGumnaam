@@ -110,19 +110,19 @@
                                 </buttonConfiguration>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y1X-Jm-RLs">
-                                <rect key="frame" x="0.0" y="438" width="183" height="92"/>
+                                <rect key="frame" x="20" y="255" width="388" height="642"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="KPB-dQ-6K0" style="IBUITableViewCellStyleDefault" id="aBi-kC-Omo">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="183" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="388" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aBi-kC-Omo" id="8Vg-N2-aoZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="183" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KPB-dQ-6K0">
-                                                    <rect key="frame" x="16" y="0.0" width="151" height="43.666667938232422"/>
+                                                    <rect key="frame" x="20" y="0.0" width="348" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -264,10 +264,12 @@
                         <outlet property="dropDownView" destination="Ywg-Ro-lB7" id="Wzb-0T-LMq"/>
                         <outlet property="nameOfTask" destination="HkF-jQ-dZG" id="XG7-KO-5w5"/>
                         <outlet property="nameOfTaskField" destination="14j-4o-lDL" id="Qph-se-rWA"/>
+                        <outlet property="personalNotes" destination="3RO-yC-Ryj" id="mmt-ta-zJ8"/>
                         <outlet property="priorityDropDown" destination="g4w-Sr-elU" id="M8n-Rp-GgK"/>
                         <outlet property="priorityLable" destination="asK-Gz-1Zi" id="0cp-Mh-umW"/>
                         <outlet property="selectDueDate" destination="Vff-Ly-eZZ" id="pbF-lp-cpa"/>
                         <outlet property="subTaskButton" destination="Gd9-4l-ZzC" id="S4W-I5-p3u"/>
+                        <outlet property="watcher" destination="o4S-VW-bDE" id="O5c-JM-oRA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCN-Kt-H1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
