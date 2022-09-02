@@ -35,6 +35,7 @@
 		4EB7893D28C2219B00A1C45A /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 4EB7893C28C2219B00A1C45A /* Algorithms */; };
 		4EB7893F28C2231300A1C45A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7893E28C2231300A1C45A /* GoogleService-Info.plist */; };
 		4EB7894228C24D7F00A1C45A /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7894128C24D7F00A1C45A /* CreateTask.swift */; };
+		4EB7894528C2902100A1C45A /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7894428C2902100A1C45A /* LoginScreenViewController.swift */; };
 		AFBC97BF0F0803109A8990BF /* Pods_ProjectInnovation_ProjectInnovationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7FA76E0295AE927262DD4C /* Pods_ProjectInnovation_ProjectInnovationUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		4EB7893528C20AC700A1C45A /* AssignedMeTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignedMeTaskViewController.swift; sourceTree = "<group>"; };
 		4EB7893E28C2231300A1C45A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4EB7894128C24D7F00A1C45A /* CreateTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTask.swift; sourceTree = "<group>"; };
+		4EB7894428C2902100A1C45A /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		684250AA4242D73B03F16C18 /* Pods-ProjectInnovationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovationTests.release.xcconfig"; path = "Target Support Files/Pods-ProjectInnovationTests/Pods-ProjectInnovationTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A778B13FC04F78276DD9647 /* Pods-ProjectInnovation-ProjectInnovationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovation-ProjectInnovationUITests.release.xcconfig"; path = "Target Support Files/Pods-ProjectInnovation-ProjectInnovationUITests/Pods-ProjectInnovation-ProjectInnovationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E0D4A93F4354541F18E7D07 /* Pods-ProjectInnovation-ProjectInnovationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovation-ProjectInnovationUITests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectInnovation-ProjectInnovationUITests/Pods-ProjectInnovation-ProjectInnovationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				4E5EBD9B28BB4E9A00BA55CD /* ThirdScreenViewController.swift */,
 				4E63244A28C14FED00466C31 /* SecondScreenViewController.swift */,
 				4EB7893528C20AC700A1C45A /* AssignedMeTaskViewController.swift */,
+				4EB7894428C2902100A1C45A /* LoginScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				4E5EBDDA28BB813F00BA55CD /* DataModels.swift in Sources */,
 				4E5EBDD528BB5D4800BA55CD /* Services.swift in Sources */,
 				4E5EBDD728BB5FA600BA55CD /* ApiEndPoints.swift in Sources */,
+				4EB7894528C2902100A1C45A /* LoginScreenViewController.swift in Sources */,
 				4E5EBD9C28BB4E9A00BA55CD /* ThirdScreenViewController.swift in Sources */,
 				4E5EBD9828BB4E9A00BA55CD /* AppDelegate.swift in Sources */,
 				4E5EBDDF28BBB33700BA55CD /* ActivitySpinner.swift in Sources */,
