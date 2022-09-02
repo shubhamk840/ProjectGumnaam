@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		06B63E71DE929EFB5233D9E5 /* Pods_ProjectInnovation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD512CDDAADA7CF738AA2FC0 /* Pods_ProjectInnovation.framework */; };
 		2288AF9819CEC24111F61752 /* Pods_ProjectInnovationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBD1BEE462EEDC34F553F97 /* Pods_ProjectInnovationTests.framework */; };
+		4E3F73C528C2B8B700B72367 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F73C328C2B8B700B72367 /* UsersTableViewCell.swift */; };
+		4E3F73C628C2B8B700B72367 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3F73C428C2B8B700B72367 /* UsersTableViewCell.xib */; };
 		4E5EBD9828BB4E9A00BA55CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9728BB4E9A00BA55CD /* AppDelegate.swift */; };
 		4E5EBD9A28BB4E9A00BA55CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9928BB4E9A00BA55CD /* SceneDelegate.swift */; };
 		4E5EBD9C28BB4E9A00BA55CD /* ThirdScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9B28BB4E9A00BA55CD /* ThirdScreenViewController.swift */; };
@@ -37,6 +39,7 @@
 		4EB7894228C24D7F00A1C45A /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7894128C24D7F00A1C45A /* CreateTask.swift */; };
 		4EB7894528C2902100A1C45A /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7894428C2902100A1C45A /* LoginScreenViewController.swift */; };
 		AFBC97BF0F0803109A8990BF /* Pods_ProjectInnovation_ProjectInnovationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7FA76E0295AE927262DD4C /* Pods_ProjectInnovation_ProjectInnovationUITests.framework */; };
+		F54BAA3128C28D49006E2F05 /* TaskScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAA2F28C28D49006E2F05 /* TaskScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,8 @@
 /* Begin PBXFileReference section */
 		0D7FA76E0295AE927262DD4C /* Pods_ProjectInnovation_ProjectInnovationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectInnovation_ProjectInnovationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B65E8999C5B6E5FEB175924 /* Pods-ProjectInnovation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovation.release.xcconfig"; path = "Target Support Files/Pods-ProjectInnovation/Pods-ProjectInnovation.release.xcconfig"; sourceTree = "<group>"; };
+		4E3F73C328C2B8B700B72367 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		4E3F73C428C2B8B700B72367 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
 		4E5EBD9428BB4E9A00BA55CD /* ProjectInnovation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectInnovation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5EBD9728BB4E9A00BA55CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E5EBD9928BB4E9A00BA55CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 		B33DB5E06B33E03D6D46B4F1 /* Pods-ProjectInnovationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovationTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectInnovationTests/Pods-ProjectInnovationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD512CDDAADA7CF738AA2FC0 /* Pods_ProjectInnovation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectInnovation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E218B65FD166A9B1687E1901 /* Pods-ProjectInnovation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovation.debug.xcconfig"; path = "Target Support Files/Pods-ProjectInnovation/Pods-ProjectInnovation.debug.xcconfig"; sourceTree = "<group>"; };
+		F54BAA2F28C28D49006E2F05 /* TaskScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,7 @@
 				4E63244A28C14FED00466C31 /* SecondScreenViewController.swift */,
 				4EB7893528C20AC700A1C45A /* AssignedMeTaskViewController.swift */,
 				4EB7894428C2902100A1C45A /* LoginScreenViewController.swift */,
+				F54BAA2F28C28D49006E2F05 /* TaskScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +240,8 @@
 				4EB7892E28C1DCFA00A1C45A /* CardsTableViewCell.xib */,
 				4EB7893128C1FEE900A1C45A /* SectionHeaderTableViewCell.swift */,
 				4EB7893228C1FEE900A1C45A /* SectionHeaderTableViewCell.xib */,
+				4E3F73C328C2B8B700B72367 /* UsersTableViewCell.swift */,
+				4E3F73C428C2B8B700B72367 /* UsersTableViewCell.xib */,
 			);
 			path = TabelViewCells;
 			sourceTree = "<group>";
@@ -375,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3F73C628C2B8B700B72367 /* UsersTableViewCell.xib in Resources */,
 				4EB7893028C1DCFA00A1C45A /* CardsTableViewCell.xib in Resources */,
 				4EB7893428C1FEE900A1C45A /* SectionHeaderTableViewCell.xib in Resources */,
 				4E5EBDA728BB4E9A00BA55CD /* LaunchScreen.storyboard in Resources */,
@@ -511,12 +521,14 @@
 				4E63244B28C14FED00466C31 /* SecondScreenViewController.swift in Sources */,
 				4E5EBDD028BB529200BA55CD /* MainScreenViewController.swift in Sources */,
 				4EB7894228C24D7F00A1C45A /* CreateTask.swift in Sources */,
+				4E3F73C528C2B8B700B72367 /* UsersTableViewCell.swift in Sources */,
 				4EB7893328C1FEE900A1C45A /* SectionHeaderTableViewCell.swift in Sources */,
 				4E5EBDDA28BB813F00BA55CD /* DataModels.swift in Sources */,
 				4E5EBDD528BB5D4800BA55CD /* Services.swift in Sources */,
 				4E5EBDD728BB5FA600BA55CD /* ApiEndPoints.swift in Sources */,
 				4EB7894528C2902100A1C45A /* LoginScreenViewController.swift in Sources */,
 				4E5EBD9C28BB4E9A00BA55CD /* ThirdScreenViewController.swift in Sources */,
+				F54BAA3128C28D49006E2F05 /* TaskScreenViewController.swift in Sources */,
 				4E5EBD9828BB4E9A00BA55CD /* AppDelegate.swift in Sources */,
 				4E5EBDDF28BBB33700BA55CD /* ActivitySpinner.swift in Sources */,
 				4EB7893628C20AC700A1C45A /* AssignedMeTaskViewController.swift in Sources */,
