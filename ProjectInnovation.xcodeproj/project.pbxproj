@@ -36,6 +36,7 @@
 		4EB7893F28C2231300A1C45A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EB7893E28C2231300A1C45A /* GoogleService-Info.plist */; };
 		4EB7894228C24D7F00A1C45A /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7894128C24D7F00A1C45A /* CreateTask.swift */; };
 		AFBC97BF0F0803109A8990BF /* Pods_ProjectInnovation_ProjectInnovationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7FA76E0295AE927262DD4C /* Pods_ProjectInnovation_ProjectInnovationUITests.framework */; };
+		F54BAA3128C28D49006E2F05 /* TaskScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAA2F28C28D49006E2F05 /* TaskScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		B33DB5E06B33E03D6D46B4F1 /* Pods-ProjectInnovationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovationTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectInnovationTests/Pods-ProjectInnovationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD512CDDAADA7CF738AA2FC0 /* Pods_ProjectInnovation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectInnovation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E218B65FD166A9B1687E1901 /* Pods-ProjectInnovation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovation.debug.xcconfig"; path = "Target Support Files/Pods-ProjectInnovation/Pods-ProjectInnovation.debug.xcconfig"; sourceTree = "<group>"; };
+		F54BAA2F28C28D49006E2F05 /* TaskScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				4E5EBD9B28BB4E9A00BA55CD /* ThirdScreenViewController.swift */,
 				4E63244A28C14FED00466C31 /* SecondScreenViewController.swift */,
 				4EB7893528C20AC700A1C45A /* AssignedMeTaskViewController.swift */,
+				F54BAA2F28C28D49006E2F05 /* TaskScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				4E5EBDD528BB5D4800BA55CD /* Services.swift in Sources */,
 				4E5EBDD728BB5FA600BA55CD /* ApiEndPoints.swift in Sources */,
 				4E5EBD9C28BB4E9A00BA55CD /* ThirdScreenViewController.swift in Sources */,
+				F54BAA3128C28D49006E2F05 /* TaskScreenViewController.swift in Sources */,
 				4E5EBD9828BB4E9A00BA55CD /* AppDelegate.swift in Sources */,
 				4E5EBDDF28BBB33700BA55CD /* ActivitySpinner.swift in Sources */,
 				4EB7893628C20AC700A1C45A /* AssignedMeTaskViewController.swift in Sources */,
