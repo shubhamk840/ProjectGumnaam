@@ -8,6 +8,27 @@
 import UIKit
 
 class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBAction func fourthCardBtnClicked(_ sender: Any) {
+    }
+    @IBOutlet weak var fourthBtnClicked: UIButton!
+    
+    @IBOutlet weak var assignedToYouBtnClicked: UIButton!
+    
+    @IBAction func byMeBtnClicked(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AssignedMeTaskViewController") as! AssignedMeTaskViewController
+        vc.navigationItem.title = "Assigned by me"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func toYouBtnClicked(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AssignedMeTaskViewController") as! AssignedMeTaskViewController
+        vc.navigationItem.title = "Assigned to you"
+        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
+    @IBAction func personalTaskBtnClicked(_ sender: Any) {
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         5
     }
@@ -31,4 +52,5 @@ class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         self.tableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: "UsersTableViewCell")
         self.tableView.separatorStyle = .none
     }
+   
 }
