@@ -9,6 +9,9 @@ import UIKit
 var userIdOfTheUser:EmployeeData?
 var allUserData = [CreateTask]()
 var employeeData = [EmployeeData]()
+var assigneToMe = [CreateTask]()
+var assignByMe = [CreateTask]()
+
 class LoginScreenViewController: UIViewController {
 
     func makeAnApiCall() {
@@ -33,6 +36,16 @@ class LoginScreenViewController: UIViewController {
             allUserData = response as! [CreateTask]
             print(allUserData)
             print(allUserData.count)
+            for data in allUserData {
+                if let id = userIdOfTheUser?.userid {
+                    if data.taskCreater == id {
+                        assignByMe.append(data)
+                    }
+                    if data.assignee == id {
+                        assigneToMe.append(data)
+                    }
+                }
+            }
             SVProgressHUD.dismiss(currentViewController: self)
             
         }, onFailure : {
@@ -40,6 +53,7 @@ class LoginScreenViewController: UIViewController {
             SVProgressHUD.dismiss(currentViewController: self)
             print(error)
         })
+        
     }
     @IBOutlet weak var slackView: UIView!
     @IBOutlet weak var googleView: UIView!

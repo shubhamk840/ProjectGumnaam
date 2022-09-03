@@ -109,7 +109,7 @@ class SecondScreenViewController: UIViewController {
       
         let param : Parameters =
         [
-            "priority": priorityLable.text ?? "",
+            "priority": priorityLable.text ?? "Low",
             "assignee": assignToFiedl.text ?? "",
             "taskTitle": nameOfTaskField.text ?? "",
             "description": descriptionField.text ?? "",
@@ -121,12 +121,17 @@ class SecondScreenViewController: UIViewController {
         Services.createTask(endPoint: "create_task/",parameters: param ,onSuccess: {
             (response) in
             SVProgressHUD.dismiss(currentViewController: self)
+            let uialert = UIAlertController(title: "Success", message: "Your Task Has Been SuccessFully Created", preferredStyle: UIAlertController.Style.alert)
+            uialert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+            self.present(uialert, animated: true, completion: nil)
         }, onFailure : {
             (error) in
             SVProgressHUD.dismiss(currentViewController: self)
+            let uialert = UIAlertController(title: "Failed", message: "Your Task is not created, got some internal error", preferredStyle: UIAlertController.Style.alert)
+            uialert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+            self.present(uialert, animated: true, completion: nil)
             print(error)
         })
-        
     }
     
     @objc func showPriority(sender: Any) {
