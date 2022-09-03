@@ -177,6 +177,9 @@ extension SecondScreenViewController: UITableViewDelegate, UITableViewDataSource
         else {
             assignToFiedl.text = itemforassign[indexPath.row]
         }
+        self.assignTableView.isHidden = true
+
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
