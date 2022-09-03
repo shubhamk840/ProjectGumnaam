@@ -27,6 +27,9 @@
                         <rect key="frame" x="361.5" y="29.5" width="50.5" height="31"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="forward" catalog="system" title=""/>
+                        <connections>
+                            <action selector="clicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mRI-BS-Zxv"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -38,6 +41,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="clickedOnTheButton" destination="hDy-dp-1ix" id="HEi-TW-x63"/>
+                <outlet property="head" destination="FaH-iT-Yht" id="UO9-5V-G1O"/>
+                <outlet property="heading" destination="8LV-LJ-C24" id="Ksd-d6-tij"/>
+            </connections>
             <point key="canvasLocation" x="205.79710144927537" y="145.3125"/>
         </tableViewCell>
     </objects>

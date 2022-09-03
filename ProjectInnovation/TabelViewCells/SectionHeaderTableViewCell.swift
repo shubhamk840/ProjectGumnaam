@@ -9,6 +9,12 @@ import UIKit
 
 class SectionHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var head: UILabel!
+    @IBAction func clicked(_ sender: Any) {
+        
+    }
+    @IBOutlet weak var clickedOnTheButton: UIButton!
+    @IBOutlet weak var heading: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

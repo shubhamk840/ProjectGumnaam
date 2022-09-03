@@ -11,6 +11,7 @@ import DropDown
 class AssignedMeTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     func setupCellLook(indexPath: IndexPath)->UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CardsTableViewCell", for: indexPath) as! CardsTableViewCell
+        cell.selectionStyle = .none
         cell.priority.layer.backgroundColor = UIColor(red: 1, green: 0.9, blue: 0.9, alpha: 1).cgColor
         cell.priority.layer.cornerRadius = 8
         cell.status.layer.backgroundColor = UIColor(red: 0.858, green: 0.89, blue: 1, alpha: 1).cgColor
@@ -31,6 +32,8 @@ class AssignedMeTaskViewController: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "IndividualTaskViewController") as! IndividualTaskViewController
+        vc.desc = allUserData[indexPath.row].description ?? "This is description about the task"
+        vc.title = allUserData[indexPath.row].taskTitle ?? "This is the task"
         self.navigationController?.pushViewController(vc, animated: true)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

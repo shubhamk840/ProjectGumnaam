@@ -132,6 +132,31 @@ class SecondScreenViewController: UIViewController {
             self.present(uialert, animated: true, completion: nil)
             print(error)
         })
+        
+        SVProgressHUD.show(currentViewController: self)
+        Services.fetchData(endPoint: "get_task/",onSuccess: {
+            (response) in
+            allUserData = response as! [CreateTask]
+            print(allUserData)
+            print(allUserData.count)
+            for data in allUserData {
+                if let id = userIdOfTheUser?.userid {
+                    if data.taskCreater == id {
+                        assignByMe.append(data)
+                    }
+                    if data.assignee == id {
+                        assigneToMe.append(data)
+                    }
+                }
+            }
+            SVProgressHUD.dismiss(currentViewController: self)
+            
+        }, onFailure : {
+            (error) in
+            SVProgressHUD.dismiss(currentViewController: self)
+            print(error)
+        })
+        
     }
     
     @objc func showPriority(sender: Any) {

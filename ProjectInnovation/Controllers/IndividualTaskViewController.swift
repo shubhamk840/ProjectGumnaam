@@ -20,6 +20,10 @@ class IndividualTaskViewController: UIViewController {
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var priorityView: UIView!
     
+    var desc : String = "Reivew My Pr Please"
+    var titleForTask: String = "Reivew My PR please"
+    
+    
     let dropDownForPriority = DropDown()
     let dropDownForStatus = DropDown()
     let priorityArray = ["High", "Medium", "Low"]
@@ -48,6 +52,8 @@ class IndividualTaskViewController: UIViewController {
         }
         priorityView.isHidden = true
         statusView.isHidden = true
+        self.descriptionLable.text = desc
+        self.taskTitle.text = title
         // Do any additional setup after loading the view.
     }
     

@@ -9,8 +9,9 @@ import UIKit
 
 class FirstScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    func setupCellLook(indexPath: IndexPath)->UITableViewCell {
+    func setupCellLook(indexPath: IndexPath, data:[CreateTask])->UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CardsTableViewCell", for: indexPath) as! CardsTableViewCell
+        cell.selectionStyle = .none
         cell.priority.layer.backgroundColor = UIColor(red: 1, green: 0.9, blue: 0.9, alpha: 1).cgColor
         cell.priority.layer.cornerRadius = 8
         cell.status.layer.backgroundColor = UIColor(red: 0.858, green: 0.89, blue: 1, alpha: 1).cgColor
@@ -36,22 +37,39 @@ class FirstScreenViewController: UIViewController, UITableViewDataSource, UITabl
         return CGFloat(150)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if indexPath.row == 0 || indexPath.row == 4 {
+            let vc = storyboard.instantiateViewController(withIdentifier: "AssignedMeTaskViewController") as! AssignedMeTaskViewController
+//            vc.navigationItem.title = self.head.text
+            self.navigationController?.pushViewController(vc, animated: true)
+            return
+        }
+        let vc = storyboard.instantiateViewController(withIdentifier: "IndividualTaskViewController") as! IndividualTaskViewController
+        vc.desc = "This is description about the task"
+        vc.title = "This is the task"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SectionHeaderTableViewCell", for: indexPath) as! SectionHeaderTableViewCell
+            cell.head.text = "Assigned to me"
+            cell.selectionStyle = .none
             return cell
         }
         else if indexPath.row > 0 && indexPath.row <= 3 {
-        let cell = setupCellLook(indexPath: indexPath)
+            let cell = setupCellLook(indexPath: indexPath, data: assigneToMe)
        
         return cell
         }
         else if (indexPath.row == 4){
             let cell = tableView.dequeueReusableCell(withIdentifier: "SectionHeaderTableViewCell", for: indexPath) as! SectionHeaderTableViewCell
+            cell.head.text = "Assigned by me"
             return cell
         }
         else {
-            let cell = setupCellLook(indexPath: indexPath)
+            let cell = setupCellLook(indexPath: indexPath,data: assignByMe)
             return cell
         }
     }
