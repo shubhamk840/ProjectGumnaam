@@ -150,7 +150,7 @@
                                 <rect key="frame" x="26" y="253" width="252" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4w-Sr-elU">
-                                        <rect key="frame" x="208.33333333333334" y="-6" width="43.666666666666657" height="30.666666666666668"/>
+                                        <rect key="frame" x="208.33333333333334" y="-6" width="43.666666666666657" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="vR1-9p-3mf"/>
                                         </constraints>
@@ -159,7 +159,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asK-Gz-1Zi">
-                                        <rect key="frame" x="7" y="0.0" width="245" height="28"/>
+                                        <rect key="frame" x="7" y="2.6666666666666572" width="245" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="UNV-m3-A3Q"/>
                                         </constraints>
@@ -172,7 +172,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="6wE-wU-kgl"/>
                                     <constraint firstAttribute="trailing" secondItem="asK-Gz-1Zi" secondAttribute="trailing" id="9i1-Q1-CnB"/>
-                                    <constraint firstItem="asK-Gz-1Zi" firstAttribute="top" secondItem="Ywg-Ro-lB7" secondAttribute="top" id="mYf-ZO-9hI"/>
+                                    <constraint firstItem="g4w-Sr-elU" firstAttribute="centerY" secondItem="Ywg-Ro-lB7" secondAttribute="centerY" id="MLV-sM-aZR"/>
+                                    <constraint firstItem="asK-Gz-1Zi" firstAttribute="centerY" secondItem="Ywg-Ro-lB7" secondAttribute="centerY" id="Odw-dy-8Ug"/>
                                     <constraint firstItem="g4w-Sr-elU" firstAttribute="trailing" secondItem="asK-Gz-1Zi" secondAttribute="trailing" id="ps0-o5-P6s"/>
                                     <constraint firstItem="asK-Gz-1Zi" firstAttribute="leading" secondItem="Ywg-Ro-lB7" secondAttribute="leading" constant="7" id="rW9-85-NoT"/>
                                     <constraint firstItem="g4w-Sr-elU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ywg-Ro-lB7" secondAttribute="leading" constant="20" symbolic="YES" id="tIl-Rd-DcE"/>
