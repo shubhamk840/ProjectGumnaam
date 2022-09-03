@@ -41,6 +41,10 @@ class LoginScreenViewController: UIViewController {
             print(error)
         })
     }
+    @IBOutlet weak var slackView: UIView!
+    @IBOutlet weak var googleView: UIView!
+    @IBOutlet weak var microsoftView: UIView!
+
     @IBAction func slackButton(_ sender: Any) {
         makeAnApiCall()
         userIdOfTheUser = EmployeeData(username: "Shubhransh Gupta", userid: "U02288VLLGY", email: "shubhransh.gupta@gonuclei.com", fullname: "Shubhransh Gupta")
@@ -60,12 +64,16 @@ class LoginScreenViewController: UIViewController {
     @IBAction func microsoftButton(_ sender: Any) {
         makeAnApiCall()
         let vc = storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
+
         self.navigationController?.pushViewController(vc, animated: true)
         self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.microsoftView.layer.cornerRadius = 8
+        self.slackView.layer.cornerRadius = 8
+        self.googleView.layer.cornerRadius = 8
     }
 
 
