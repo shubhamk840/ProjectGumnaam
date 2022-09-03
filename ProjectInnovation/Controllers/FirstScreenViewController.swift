@@ -23,6 +23,11 @@ class FirstScreenViewController: UIViewController, UITableViewDataSource, UITabl
         cell.viewInsideCell.layer.cornerRadius = 8
         cell.viewInsideCell.layer.borderWidth = 1
         cell.viewInsideCell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        if indexPath.row < allUserData.count {
+            cell.mainTitle.text = allUserData[indexPath.row].taskTitle
+            cell.priority.text = allUserData[indexPath.row].priority ?? "High"
+            cell.dueDate.text = "Due Date" + (allUserData[indexPath.row].dueDate! ?? "2-JULY-2022")
+        }
         return cell
     }
     var totalNumberOfRow = 8
@@ -47,9 +52,15 @@ class FirstScreenViewController: UIViewController, UITableViewDataSource, UITabl
             return
         }
         let vc = storyboard.instantiateViewController(withIdentifier: "IndividualTaskViewController") as! IndividualTaskViewController
-        vc.desc = "This is description about the task"
-        vc.titleForTask = "This is the task"
-        vc.title = "Task"
+        if indexPath.row < allUserData.count {
+            vc.desc = allUserData[indexPath.row].description ?? "This is description about the task"
+            vc.title = allUserData[indexPath.row].taskTitle ?? "This is the task"
+        }
+        else {
+            vc.desc = "This is description about the task"
+            vc.titleForTask = "PR Review"
+            vc.title = "PR Review"
+        }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

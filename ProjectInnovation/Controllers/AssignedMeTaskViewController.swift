@@ -25,8 +25,6 @@ class AssignedMeTaskViewController: UIViewController, UITableViewDelegate, UITab
         cell.viewInsideCell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
         cell.mainTitle.text = allUserData[indexPath.row].taskTitle
         cell.priority.text = allUserData[indexPath.row].priority ?? "High"
-    
-       
         cell.dueDate.text = "Due Date" + (allUserData[indexPath.row].dueDate! ?? "2-JULY-2022")
         
         return cell
