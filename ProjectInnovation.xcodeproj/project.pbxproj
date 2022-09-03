@@ -40,6 +40,7 @@
 		4EB7894528C2902100A1C45A /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7894428C2902100A1C45A /* LoginScreenViewController.swift */; };
 		AFBC97BF0F0803109A8990BF /* Pods_ProjectInnovation_ProjectInnovationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D7FA76E0295AE927262DD4C /* Pods_ProjectInnovation_ProjectInnovationUITests.framework */; };
 		F54BAA3128C28D49006E2F05 /* TaskScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAA2F28C28D49006E2F05 /* TaskScreenViewController.swift */; };
+		F54BAA3428C3145D006E2F05 /* IndividualTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAA3328C3145D006E2F05 /* IndividualTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		CD512CDDAADA7CF738AA2FC0 /* Pods_ProjectInnovation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectInnovation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E218B65FD166A9B1687E1901 /* Pods-ProjectInnovation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovation.debug.xcconfig"; path = "Target Support Files/Pods-ProjectInnovation/Pods-ProjectInnovation.debug.xcconfig"; sourceTree = "<group>"; };
 		F54BAA2F28C28D49006E2F05 /* TaskScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScreenViewController.swift; sourceTree = "<group>"; };
+		F54BAA3328C3145D006E2F05 /* IndividualTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				4EB7893528C20AC700A1C45A /* AssignedMeTaskViewController.swift */,
 				4EB7894428C2902100A1C45A /* LoginScreenViewController.swift */,
 				F54BAA2F28C28D49006E2F05 /* TaskScreenViewController.swift */,
+				F54BAA3328C3145D006E2F05 /* IndividualTaskViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				4E5EBD9C28BB4E9A00BA55CD /* ThirdScreenViewController.swift in Sources */,
 				F54BAA3128C28D49006E2F05 /* TaskScreenViewController.swift in Sources */,
 				4E5EBD9828BB4E9A00BA55CD /* AppDelegate.swift in Sources */,
+				F54BAA3428C3145D006E2F05 /* IndividualTaskViewController.swift in Sources */,
 				4E5EBDDF28BBB33700BA55CD /* ActivitySpinner.swift in Sources */,
 				4EB7893628C20AC700A1C45A /* AssignedMeTaskViewController.swift in Sources */,
 				4E5EBDA228BB4E9A00BA55CD /* ProjectInnovation.xcdatamodeld in Sources */,
