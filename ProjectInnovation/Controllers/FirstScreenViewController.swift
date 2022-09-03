@@ -72,7 +72,7 @@ class FirstScreenViewController: UIViewController, UITableViewDataSource, UITabl
             SVProgressHUD.dismiss(currentViewController: self)
             print(error)
         })
-        
+        self.navigationItem.title = "Overview"
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "CardsTableViewCell", bundle: nil), forCellReuseIdentifier: "CardsTableViewCell")
         self.tableView.register(UINib(nibName: "SectionHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "SectionHeaderTableViewCell")

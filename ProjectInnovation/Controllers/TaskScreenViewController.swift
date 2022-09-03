@@ -47,6 +47,7 @@ class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "All Tasks"
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.register(UINib(nibName: "UsersTableViewCell", bundle: nil), forCellReuseIdentifier: "UsersTableViewCell")
