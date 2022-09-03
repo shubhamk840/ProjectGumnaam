@@ -9,11 +9,19 @@ import UIKit
 var navBar:UINavigationController?
 class LoginScreenViewController: UIViewController {
 
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var emailId: UITextField!
+
+    @IBAction func slackButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "TaskScreenViewController") as! TaskScreenViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
-    @IBAction func signinBtnClicked(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
+    @IBAction func googleButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MainScreenViewController") as! MainScreenViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func microsoftButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SecondScreenViewController") as! SecondScreenViewController
         self.navigationController?.pushViewController(vc, animated: true)
         self.navigationController?.isNavigationBarHidden = true
         navBar = self.navigationController
@@ -21,19 +29,7 @@ class LoginScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
