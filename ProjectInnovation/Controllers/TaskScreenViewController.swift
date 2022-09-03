@@ -23,7 +23,7 @@ class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     @IBAction func toYouBtnClicked(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AssignedMeTaskViewController") as! AssignedMeTaskViewController
-        vc.navigationItem.title = "Assigned to you"
+        vc.navigationItem.title = "Assigned to me"
         self.navigationController?.pushViewController(vc, animated: true)
 
     }
@@ -32,6 +32,10 @@ class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         5
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

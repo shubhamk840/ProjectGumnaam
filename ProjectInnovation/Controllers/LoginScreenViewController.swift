@@ -37,7 +37,7 @@ class LoginScreenViewController: UIViewController {
             print(allUserData)
             print(allUserData.count)
             for data in allUserData {
-                if let id = userIdOfTheUser?.userid {
+                if let id = userIdOfTheUser?.fullname {
                     if data.taskCreater == id {
                         assignByMe.append(data)
                     }

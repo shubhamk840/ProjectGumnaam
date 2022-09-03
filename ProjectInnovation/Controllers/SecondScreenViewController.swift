@@ -33,7 +33,7 @@ class SecondScreenViewController: UIViewController {
     @IBOutlet weak var dateField: UITextField!
     
     var searching = false
-    var itemforassign = [userOne,userTwo,userThree]
+    var itemforassign = ["Rohit"]
     var filteredArrray = [String]()
     
     let dropDown = DropDown()
@@ -81,6 +81,11 @@ class SecondScreenViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        for item in employeeData {
+            if let fullname = item.fullname {
+                itemforassign.append(fullname)
+            }
+        }
         self.view.layer.backgroundColor = UIColor(red: 0.929, green: 0.952, blue: 1, alpha: 1).cgColor
         self.navigationItem.title = "Create new task"
         self.assignTableView.isHidden = true
@@ -109,7 +114,7 @@ class SecondScreenViewController: UIViewController {
             "taskTitle": nameOfTaskField.text ?? "",
             "description": descriptionField.text ?? "",
             "dueDate": dateField.text ?? "",
-            "taskCreater": userIdOfTheUser?.userid ?? ""
+            "taskCreater": userIdOfTheUser?.fullname ?? ""
         ]
         SVProgressHUD.show(currentViewController: self)
         let Services = Services()
@@ -135,7 +140,7 @@ class SecondScreenViewController: UIViewController {
             print(allUserData)
             print(allUserData.count)
             for data in allUserData {
-                if let id = userIdOfTheUser?.userid {
+                if let id = userIdOfTheUser?.username{
                     if data.taskCreater == id {
                         assignByMe.append(data)
                     }
@@ -161,6 +166,7 @@ class SecondScreenViewController: UIViewController {
     @objc func searchAssign(sender: UITextField)
     {
         self.filteredArrray.removeAll()
+       
         if let searchData:Int = assignToFiedl.text?.count {
             if searchData != 0{
                 searching = true

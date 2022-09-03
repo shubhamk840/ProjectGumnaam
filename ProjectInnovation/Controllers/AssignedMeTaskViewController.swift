@@ -23,8 +23,19 @@ class AssignedMeTaskViewController: UIViewController, UITableViewDelegate, UITab
         cell.viewInsideCell.layer.cornerRadius = 8
         cell.viewInsideCell.layer.borderWidth = 1
         cell.viewInsideCell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        cell.mainTitle.text = allUserData[indexPath.row].taskTitle
-        cell.priority.text = allUserData[indexPath.row].priority ?? "High"
+        if self.title == "Assigned by me" {
+            cell.mainTitle.text = assignByMe[indexPath.row].taskTitle
+            cell.priority.text = assignByMe[indexPath.row].priority ?? "High"
+        }
+        if self.title == "Assigned to me" {
+            cell.mainTitle.text = assigneToMe[indexPath.row].taskTitle
+            cell.priority.text = assigneToMe[indexPath.row].priority ?? "High"
+        }
+        else{
+            cell.mainTitle.text = allUserData[indexPath.row].taskTitle
+            cell.priority.text = allUserData[indexPath.row].priority ?? "High"
+        }
+       
         cell.dueDate.text = "Due Date" + (allUserData[indexPath.row].dueDate! ?? "2-JULY-2022")
         
         return cell
@@ -37,7 +48,15 @@ class AssignedMeTaskViewController: UIViewController, UITableViewDelegate, UITab
         self.navigationController?.pushViewController(vc, animated: true)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allUserData.count
+        if self.title == "Assigned by me" {
+        return assignByMe.count
+        }
+        if self.title == "Assigned to me" {
+        return assigneToMe.count
+        }
+        else{
+            return allUserData.count
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(150)
