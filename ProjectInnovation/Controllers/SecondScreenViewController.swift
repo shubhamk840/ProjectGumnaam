@@ -120,10 +120,7 @@ class SecondScreenViewController: UIViewController {
         let Services = Services()
         Services.createTask(endPoint: "create_task/",parameters: param ,onSuccess: {
             (response) in
-            let CreateTaskResponse = response as! CreateTaskResponse
-            print(CreateTaskResponse)
             SVProgressHUD.dismiss(currentViewController: self)
-            
         }, onFailure : {
             (error) in
             SVProgressHUD.dismiss(currentViewController: self)
