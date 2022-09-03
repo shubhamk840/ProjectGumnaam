@@ -42,12 +42,14 @@ class FirstScreenViewController: UIViewController, UITableViewDataSource, UITabl
         if indexPath.row == 0 || indexPath.row == 4 {
             let vc = storyboard.instantiateViewController(withIdentifier: "AssignedMeTaskViewController") as! AssignedMeTaskViewController
 //            vc.navigationItem.title = self.head.text
+            vc.title = "Assigned Tasks"
             self.navigationController?.pushViewController(vc, animated: true)
             return
         }
         let vc = storyboard.instantiateViewController(withIdentifier: "IndividualTaskViewController") as! IndividualTaskViewController
         vc.desc = "This is description about the task"
-        vc.title = "This is the task"
+        vc.titleForTask = "This is the task"
+        vc.title = "Task"
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

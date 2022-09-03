@@ -46,6 +46,11 @@ class LoginScreenViewController: UIViewController {
                     }
                 }
             }
+            userIdOfTheUser = EmployeeData(username: "Shubhransh Gupta", userid: "U02288VLLGY", email: "shubhransh.gupta@gonuclei.com", fullname: "Shubhransh Gupta")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
+            self.navigationController?.isNavigationBarHidden = true
+            self.navigationController?.pushViewController(vc, animated: true)
+
             SVProgressHUD.dismiss(currentViewController: self)
             
         }, onFailure : {
@@ -61,26 +66,26 @@ class LoginScreenViewController: UIViewController {
 
     @IBAction func slackButton(_ sender: Any) {
         makeAnApiCall()
-        userIdOfTheUser = EmployeeData(username: "Shubhransh Gupta", userid: "U02288VLLGY", email: "shubhransh.gupta@gonuclei.com", fullname: "Shubhransh Gupta")
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
-        self.navigationController?.isNavigationBarHidden = true
-        self.navigationController?.pushViewController(vc, animated: true)
+//        userIdOfTheUser = EmployeeData(username: "Shubhransh Gupta", userid: "U02288VLLGY", email: "shubhransh.gupta@gonuclei.com", fullname: "Shubhransh Gupta")
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
+//        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func googleButton(_ sender: Any) {
         makeAnApiCall()
-        userIdOfTheUser = EmployeeData(username: "sumit.sarkar", userid: "U02H625MLSV", email: "sumit.sarkar@gonuclei.com", fullname: "Sumit Sarkar")
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
-        self.navigationController?.isNavigationBarHidden = true
-        self.navigationController?.pushViewController(vc, animated: true)
+//        userIdOfTheUser = EmployeeData(username: "sumit.sarkar", userid: "U02H625MLSV", email: "sumit.sarkar@gonuclei.com", fullname: "Sumit Sarkar")
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
+//        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func microsoftButton(_ sender: Any) {
         makeAnApiCall()
-        let vc = storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
-
-        self.navigationController?.pushViewController(vc, animated: true)
-        self.navigationController?.isNavigationBarHidden = true
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "MyTabBarViewController") as! MyTabBarViewController
+//
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewDidLoad() {

@@ -35,7 +35,9 @@ class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AssignedMeTaskViewController") as! AssignedMeTaskViewController
+        vc.navigationItem.title = employeeData[indexPath.row].fullname
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,6 +48,7 @@ class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.layer.cornerRadius = 5
         cell.layer.borderWidth = 1
         cell.layer.borderColor = UIColor(red: 0.892, green: 0.892, blue: 0.892, alpha: 1).cgColor
+        cell.name.text = employeeData[indexPath.row].fullname
         return cell
     }
     

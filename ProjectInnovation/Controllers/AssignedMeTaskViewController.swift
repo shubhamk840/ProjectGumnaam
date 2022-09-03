@@ -23,18 +23,9 @@ class AssignedMeTaskViewController: UIViewController, UITableViewDelegate, UITab
         cell.viewInsideCell.layer.cornerRadius = 8
         cell.viewInsideCell.layer.borderWidth = 1
         cell.viewInsideCell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        if self.title == "Assigned by me" {
-            cell.mainTitle.text = assignByMe[indexPath.row].taskTitle
-            cell.priority.text = assignByMe[indexPath.row].priority ?? "High"
-        }
-        if self.title == "Assigned to me" {
-            cell.mainTitle.text = assigneToMe[indexPath.row].taskTitle
-            cell.priority.text = assigneToMe[indexPath.row].priority ?? "High"
-        }
-        else{
-            cell.mainTitle.text = allUserData[indexPath.row].taskTitle
-            cell.priority.text = allUserData[indexPath.row].priority ?? "High"
-        }
+        cell.mainTitle.text = allUserData[indexPath.row].taskTitle
+        cell.priority.text = allUserData[indexPath.row].priority ?? "High"
+    
        
         cell.dueDate.text = "Due Date" + (allUserData[indexPath.row].dueDate! ?? "2-JULY-2022")
         
