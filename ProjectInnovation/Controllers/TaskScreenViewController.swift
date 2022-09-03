@@ -38,10 +38,6 @@ class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "UsersTableViewCell", for: indexPath) as! UsersTableViewCell
         cell.profileImage.layer.cornerRadius = cell.profileImage.frame.size
             .width/2
-        cell.layer.masksToBounds = true
-        cell.layer.cornerRadius = 5
-        cell.layer.borderWidth = 1
-        cell.layer.borderColor = UIColor(red: 0.892, green: 0.892, blue: 0.892, alpha: 1).cgColor
         return cell
     }
     

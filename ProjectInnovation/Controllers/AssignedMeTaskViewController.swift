@@ -22,10 +22,17 @@ class AssignedMeTaskViewController: UIViewController, UITableViewDelegate, UITab
         cell.viewInsideCell.layer.cornerRadius = 8
         cell.viewInsideCell.layer.borderWidth = 1
         cell.viewInsideCell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        cell.mainTitle.text = allUserData[indexPath.row].taskTitle
+        cell.priority.text = allUserData[indexPath.row].priority ?? "High"
+        cell.dueDate.text = "Due Date" + (allUserData[indexPath.row].dueDate! ?? "2-JULY-2022")
+        
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return allUserData.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(150)
@@ -33,6 +40,7 @@ class AssignedMeTaskViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = setupCellLook(indexPath: indexPath)
+       
         return cell
     }
     func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
