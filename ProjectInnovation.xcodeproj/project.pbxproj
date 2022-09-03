@@ -11,6 +11,7 @@
 		2288AF9819CEC24111F61752 /* Pods_ProjectInnovationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBD1BEE462EEDC34F553F97 /* Pods_ProjectInnovationTests.framework */; };
 		4E3F73C528C2B8B700B72367 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F73C328C2B8B700B72367 /* UsersTableViewCell.swift */; };
 		4E3F73C628C2B8B700B72367 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3F73C428C2B8B700B72367 /* UsersTableViewCell.xib */; };
+		4E3F73C828C3272600B72367 /* EmployeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F73C728C3272600B72367 /* EmployeeData.swift */; };
 		4E5EBD9828BB4E9A00BA55CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9728BB4E9A00BA55CD /* AppDelegate.swift */; };
 		4E5EBD9A28BB4E9A00BA55CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9928BB4E9A00BA55CD /* SceneDelegate.swift */; };
 		4E5EBD9C28BB4E9A00BA55CD /* ThirdScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5EBD9B28BB4E9A00BA55CD /* ThirdScreenViewController.swift */; };
@@ -65,6 +66,7 @@
 		2B65E8999C5B6E5FEB175924 /* Pods-ProjectInnovation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectInnovation.release.xcconfig"; path = "Target Support Files/Pods-ProjectInnovation/Pods-ProjectInnovation.release.xcconfig"; sourceTree = "<group>"; };
 		4E3F73C328C2B8B700B72367 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		4E3F73C428C2B8B700B72367 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
+		4E3F73C728C3272600B72367 /* EmployeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeData.swift; sourceTree = "<group>"; };
 		4E5EBD9428BB4E9A00BA55CD /* ProjectInnovation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectInnovation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5EBD9728BB4E9A00BA55CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E5EBD9928BB4E9A00BA55CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			children = (
 				4E5EBDD928BB813F00BA55CD /* DataModels.swift */,
 				4EB7894128C24D7F00A1C45A /* CreateTask.swift */,
+				4E3F73C728C3272600B72367 /* EmployeeData.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				4EB7893328C1FEE900A1C45A /* SectionHeaderTableViewCell.swift in Sources */,
 				4E5EBDDA28BB813F00BA55CD /* DataModels.swift in Sources */,
 				4E5EBDD528BB5D4800BA55CD /* Services.swift in Sources */,
+				4E3F73C828C3272600B72367 /* EmployeeData.swift in Sources */,
 				4E5EBDD728BB5FA600BA55CD /* ApiEndPoints.swift in Sources */,
 				4EB7894528C2902100A1C45A /* LoginScreenViewController.swift in Sources */,
 				4E5EBD9C28BB4E9A00BA55CD /* ThirdScreenViewController.swift in Sources */,

@@ -61,17 +61,6 @@ class FirstScreenViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         
-        SVProgressHUD.show(currentViewController: self)
-        let Services = Services()
-        Services.createTask(endPoint: "get_task/",onSuccess: {
-            (dogsData) in
-            SVProgressHUD.dismiss(currentViewController: self)
-            
-        }, onFailure : {
-            (error) in
-            SVProgressHUD.dismiss(currentViewController: self)
-            print(error)
-        })
         self.navigationItem.title = "Overview"
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "CardsTableViewCell", bundle: nil), forCellReuseIdentifier: "CardsTableViewCell")

@@ -7,7 +7,10 @@
 
 import UIKit
 import DropDown
-
+import Alamofire
+let userOne = "Sumit Sarkar"
+let userTwo = "Sidhhant Gautam"
+let userThree = "Simran Kalra"
 class SecondScreenViewController: UIViewController {
 
     var toolBar = UIToolbar()
@@ -31,7 +34,7 @@ class SecondScreenViewController: UIViewController {
     @IBOutlet weak var dateField: UITextField!
     
     var searching = false
-    var itemforassign = ["sad","sasdasd","wefe","sededad","dsasdasd","xwefe"]
+    var itemforassign = [userOne,userTwo,userThree]
     var filteredArrray = [String]()
     
     let dropDown = DropDown()
@@ -103,13 +106,26 @@ class SecondScreenViewController: UIViewController {
     }
     
     @objc func creatingTask(sender: Any) {
-        var desc = [String : String]()
-        desc["priority"] = priorityLable.text
-        desc["assignee"] = assignToFiedl.text
-        desc["taskTitle"] = nameOfTaskField.text
-        desc["Description"] = descriptionField.text
-//        desc["dueDate"] =
-        desc["taskCreater"] = dateField.text
+      
+        let param : Parameters =
+        [
+            "priority": priorityLable.text ?? "",
+            "assignee": assignToFiedl.text ?? "",
+            "taskTitle": nameOfTaskField.text ?? "",
+            "description": descriptionField.text ?? "",
+            "dueDate": dateField.text ?? "",
+            "taskCreater": userIdOfTheUser?.userid ?? ""
+        ]
+        SVProgressHUD.show(currentViewController: self)
+        let Services = Services()
+        Services.createTask(endPoint: "create_task/",parameters: param ,onSuccess: {
+            (response) in
+            SVProgressHUD.dismiss(currentViewController: self)
+        }, onFailure : {
+            (error) in
+            SVProgressHUD.dismiss(currentViewController: self)
+            print(error)
+        })
         
     }
     

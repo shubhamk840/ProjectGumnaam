@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DogsData: Decodable {
+struct CreateTaskResponse: Decodable {
     var message: String?
     var status: String?
     
