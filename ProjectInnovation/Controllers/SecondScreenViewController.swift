@@ -22,7 +22,6 @@ class SecondScreenViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var assignTo: UILabel!
     @IBOutlet weak var assignToFiedl: UITextField!
-    @IBOutlet weak var subTaskButton: UIButton!
     @IBOutlet weak var assignTableView: UITableView!
     @IBOutlet weak var priorityDropDown: UIButton!
     @IBOutlet weak var dropDownView: UIView!
@@ -72,10 +71,6 @@ class SecondScreenViewController: UIViewController {
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth = screenSize.width
         
-        subTaskButton.frame = CGRect(x: 0, y: 0, width: screenWidth/3, height: 25)
-        subTaskButton.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        subTaskButton.layer.cornerRadius = 8
-
         addButton.frame = CGRect(x: 0, y: 0, width: screenWidth/3, height: 25)
         addButton.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
         addButton.layer.cornerRadius = 8
