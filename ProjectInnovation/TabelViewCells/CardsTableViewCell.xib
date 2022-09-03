@@ -81,7 +81,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp1-ib-4Ue">
-                                <rect key="frame" x="0.0" y="93" width="398" height="1"/>
+                                <rect key="frame" x="5" y="93" width="388" height="1"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ubZ-P3-hMl"/>
@@ -96,7 +96,7 @@
                             <constraint firstItem="oZ8-4M-2ex" firstAttribute="top" secondItem="4S8-PQ-I5V" secondAttribute="bottom" constant="10" id="1ZT-9k-Vlj"/>
                             <constraint firstAttribute="bottom" secondItem="xBa-fg-0kN" secondAttribute="bottom" constant="8" id="6cw-Cf-TaB"/>
                             <constraint firstAttribute="trailing" secondItem="UKC-TW-TnP" secondAttribute="trailing" constant="8" id="CjT-Dh-M1w"/>
-                            <constraint firstItem="hp1-ib-4Ue" firstAttribute="leading" secondItem="xRk-my-p4Y" secondAttribute="leading" id="Evo-kl-XYr"/>
+                            <constraint firstItem="hp1-ib-4Ue" firstAttribute="leading" secondItem="xRk-my-p4Y" secondAttribute="leading" constant="5" id="Evo-kl-XYr"/>
                             <constraint firstItem="HDf-UY-Z5q" firstAttribute="leading" secondItem="xRk-my-p4Y" secondAttribute="leading" constant="8" id="OqH-8j-dqp"/>
                             <constraint firstItem="4S8-PQ-I5V" firstAttribute="centerY" secondItem="0TW-Ql-o9y" secondAttribute="centerY" id="QNA-Vf-Moj"/>
                             <constraint firstItem="G0Q-Q3-6KU" firstAttribute="leading" secondItem="HDf-UY-Z5q" secondAttribute="trailing" constant="10" id="Vlr-Wp-3uL"/>
@@ -107,7 +107,7 @@
                             <constraint firstItem="ib9-Lc-vdl" firstAttribute="leading" secondItem="xRk-my-p4Y" secondAttribute="leading" constant="8" id="rBd-LH-n2M"/>
                             <constraint firstItem="0TW-Ql-o9y" firstAttribute="top" secondItem="HDf-UY-Z5q" secondAttribute="bottom" constant="8" id="rfq-ZL-5fw"/>
                             <constraint firstItem="UKC-TW-TnP" firstAttribute="top" secondItem="xRk-my-p4Y" secondAttribute="top" constant="8" id="s9e-XK-Lfq"/>
-                            <constraint firstAttribute="trailing" secondItem="hp1-ib-4Ue" secondAttribute="trailing" id="tKj-CW-KkG"/>
+                            <constraint firstAttribute="trailing" secondItem="hp1-ib-4Ue" secondAttribute="trailing" constant="5" id="tKj-CW-KkG"/>
                             <constraint firstItem="ib9-Lc-vdl" firstAttribute="top" secondItem="hp1-ib-4Ue" secondAttribute="bottom" constant="18" id="wDF-PT-2pU"/>
                             <constraint firstItem="G0Q-Q3-6KU" firstAttribute="top" secondItem="xRk-my-p4Y" secondAttribute="top" constant="8" id="wdk-3V-6Gy"/>
                             <constraint firstItem="HDf-UY-Z5q" firstAttribute="top" secondItem="xRk-my-p4Y" secondAttribute="top" constant="8" id="whL-OZ-kde"/>

@@ -9,6 +9,7 @@ import UIKit
 
 class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var peopleTitle: UILabel!
     @IBAction func fourthCardBtnClicked(_ sender: Any) {
     }
     @IBOutlet weak var fourthBtnClicked: UIButton!
@@ -43,10 +44,18 @@ class TaskScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(70)
     }
+    func setupUI(){
 
+        self.peopleTitle.frame = CGRect(x: 0, y: 0, width: 84, height: 26)
+        self.peopleTitle.backgroundColor = .white
+        self.peopleTitle.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        self.peopleTitle.font = UIFont(name: "Montserrat-Bold", size: 20)
+        
+    }
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+//        setupUI()
         self.navigationItem.title = "All Tasks"
         tableView.delegate = self
         tableView.dataSource = self

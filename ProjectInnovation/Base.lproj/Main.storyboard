@@ -851,17 +851,24 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eko-On-4nw">
-                                        <rect key="frame" x="20" y="420" width="388" height="335"/>
+                                        <rect key="frame" x="20" y="434" width="388" height="321"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qw-F0-xKC">
+                                        <rect key="frame" x="20" y="400" width="64.333333333333329" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="oOq-Gh-B6v" firstAttribute="top" secondItem="WjC-2u-F8n" secondAttribute="top" constant="10" id="0b9-7t-7pi"/>
-                                    <constraint firstItem="eko-On-4nw" firstAttribute="top" secondItem="MjY-iR-Uz1" secondAttribute="bottom" constant="30" id="0bN-u0-vN2"/>
                                     <constraint firstAttribute="trailing" secondItem="eko-On-4nw" secondAttribute="trailing" constant="20" id="F8r-Z6-L8S"/>
                                     <constraint firstItem="eko-On-4nw" firstAttribute="leading" secondItem="WjC-2u-F8n" secondAttribute="leading" constant="20" id="FR0-iQ-dMY"/>
                                     <constraint firstAttribute="trailing" secondItem="oOq-Gh-B6v" secondAttribute="trailing" constant="10" id="I9a-AP-tRM"/>
+                                    <constraint firstItem="eko-On-4nw" firstAttribute="top" secondItem="2qw-F0-xKC" secondAttribute="bottom" constant="10" id="OFq-mC-2Pf"/>
+                                    <constraint firstItem="2qw-F0-xKC" firstAttribute="top" secondItem="WuX-qe-bal" secondAttribute="bottom" constant="10" id="SjA-jr-sz3"/>
                                     <constraint firstItem="WuX-qe-bal" firstAttribute="top" secondItem="IlO-37-lHW" secondAttribute="bottom" constant="20" id="WXA-dQ-6a7"/>
                                     <constraint firstItem="MjY-iR-Uz1" firstAttribute="top" secondItem="oOq-Gh-B6v" secondAttribute="bottom" constant="20" id="bgc-qV-R60"/>
                                     <constraint firstAttribute="bottom" secondItem="eko-On-4nw" secondAttribute="bottom" id="cvR-Ws-zbL"/>
@@ -869,6 +876,7 @@
                                     <constraint firstItem="IlO-37-lHW" firstAttribute="leading" secondItem="WjC-2u-F8n" secondAttribute="leading" constant="10" id="hrh-5r-pbw"/>
                                     <constraint firstAttribute="trailing" secondItem="MjY-iR-Uz1" secondAttribute="trailing" constant="10" id="oWN-X1-Ifn"/>
                                     <constraint firstItem="WuX-qe-bal" firstAttribute="leading" secondItem="WjC-2u-F8n" secondAttribute="leading" constant="10" id="vQ8-Mf-972"/>
+                                    <constraint firstItem="2qw-F0-xKC" firstAttribute="leading" secondItem="WjC-2u-F8n" secondAttribute="leading" constant="20" id="wTR-Oe-4B8"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -885,6 +893,7 @@
                     <connections>
                         <outlet property="assignedToYouBtnClicked" destination="rn8-cf-n8N" id="pVf-gl-e4n"/>
                         <outlet property="fourthBtnClicked" destination="cxb-ad-0WA" id="JHd-tw-yUa"/>
+                        <outlet property="peopleTitle" destination="2qw-F0-xKC" id="wMm-sQ-97N"/>
                         <outlet property="tableView" destination="eko-On-4nw" id="KMN-8i-ztQ"/>
                     </connections>
                 </viewController>

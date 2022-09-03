@@ -8,11 +8,19 @@
 import Foundation
 
 struct CreateTask: Decodable {
-    var message: String?
-    var status: String?
+    var priority: String?
+    var assignee: String?
+    var taskTitle: String?
+    var description: String?
+    var dueDate: String?
+    var taskCreater: String?
     
     enum CodingKeys: String, CodingKey {
-        case message = "message"
-        case status = "status"
+        case priority = "message"
+        case assignee = "assignee"
+        case taskTitle = "taskTitle"
+        case dueDate = "dueDate"
+        case description = "description"
+        case taskCreater = "taskCreaterString"
     }
 }
