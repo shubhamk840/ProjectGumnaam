@@ -541,6 +541,7 @@
                         <outlet property="priorityView" destination="2iV-fI-vcX" id="Y6g-M3-SJ7"/>
                         <outlet property="statusButton" destination="VBW-Tc-eaV" id="q47-Ol-jAg"/>
                         <outlet property="statusView" destination="Mae-kY-Uwn" id="jCr-z2-cyP"/>
+                        <outlet property="taskTitle" destination="MNC-ee-FCr" id="RMG-Kb-Cav"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1m-an-Gn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

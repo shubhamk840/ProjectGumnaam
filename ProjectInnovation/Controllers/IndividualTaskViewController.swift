@@ -10,6 +10,7 @@ import DropDown
 
 class IndividualTaskViewController: UIViewController {
 
+    @IBOutlet weak var taskTitle: UILabel!
     @IBOutlet weak var commentView: UIView!
     @IBOutlet weak var priorityButton: UIButton!
     @IBOutlet weak var statusButton: UIButton!
