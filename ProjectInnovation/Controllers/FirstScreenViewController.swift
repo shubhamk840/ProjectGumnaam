@@ -9,71 +9,98 @@ import UIKit
 
 class FirstScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var totalNumberOfRow = 10
+    func setupCellLook(indexPath: IndexPath, data:[CreateTask])->UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CardsTableViewCell", for: indexPath) as! CardsTableViewCell
+        cell.selectionStyle = .none
+        cell.priority.layer.backgroundColor = UIColor(red: 1, green: 0.9, blue: 0.9, alpha: 1).cgColor
+        cell.priority.layer.cornerRadius = 8
+        cell.status.layer.backgroundColor = UIColor(red: 0.858, green: 0.89, blue: 1, alpha: 1).cgColor
+        cell.status.layer.cornerRadius = 8
+        cell.profileImage.layer.cornerRadius = cell.profileImage.frame.size
+            .width/2
+        cell.viewInsideCell.backgroundColor = .white
+        cell.viewInsideCell.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        cell.viewInsideCell.layer.cornerRadius = 8
+        cell.viewInsideCell.layer.borderWidth = 1
+        cell.viewInsideCell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        if indexPath.row < allUserData.count {
+            cell.mainTitle.text = allUserData[indexPath.row].taskTitle
+            cell.priority.text = allUserData[indexPath.row].priority ?? "High"
+            cell.dueDate.text = "Due Date" + (allUserData[indexPath.row].dueDate! ?? "2-JULY-2022")
+        }
+        return cell
+    }
+    var totalNumberOfRow = 8
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         totalNumberOfRow
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 || indexPath.row == 4 {
+            return CGFloat(30)
+        }
+        return CGFloat(150)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if indexPath.row == 0 || indexPath.row == 4 {
+            let vc = storyboard.instantiateViewController(withIdentifier: "AssignedMeTaskViewController") as! AssignedMeTaskViewController
+//            vc.navigationItem.title = self.head.text
+            vc.title = "Assigned Tasks"
+            self.navigationController?.pushViewController(vc, animated: true)
+            return
+        }
+        let vc = storyboard.instantiateViewController(withIdentifier: "IndividualTaskViewController") as! IndividualTaskViewController
+        if indexPath.row < allUserData.count {
+            vc.desc = allUserData[indexPath.row].description ?? "This is description about the task"
+            vc.title = allUserData[indexPath.row].taskTitle ?? "This is the task"
+        }
+        else {
+            vc.desc = "This is description about the task"
+            vc.titleForTask = "PR Review"
+            vc.title = "PR Review"
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SectionHeaderTableViewCell", for: indexPath) as! SectionHeaderTableViewCell
+            cell.head.text = "Assigned to me"
+            cell.selectionStyle = .none
             return cell
         }
         else if indexPath.row > 0 && indexPath.row <= 3 {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CardsTableViewCell", for: indexPath) as! CardsTableViewCell
-        cell.backgroundColor = .white
-        cell.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-        cell.layer.cornerRadius = 8
-        cell.layer.borderWidth = 1
-        cell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+            let cell = setupCellLook(indexPath: indexPath, data: assigneToMe)
+       
         return cell
         }
         else if (indexPath.row == 4){
             let cell = tableView.dequeueReusableCell(withIdentifier: "SectionHeaderTableViewCell", for: indexPath) as! SectionHeaderTableViewCell
+            cell.head.text = "Assigned by me"
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CardsTableViewCell", for: indexPath) as! CardsTableViewCell
-            cell.backgroundColor = .white
-            cell.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-            cell.layer.cornerRadius = 8
-            cell.layer.borderWidth = 1
-            cell.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+            let cell = setupCellLook(indexPath: indexPath,data: assignByMe)
             return cell
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        2
-    }
-   
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.tableView.frame.size.width-10, height: self.tableView.frame.size.height-10)
-    }
    
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+        
+        self.navigationItem.title = "Overview"
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "CardsTableViewCell", bundle: nil), forCellReuseIdentifier: "CardsTableViewCell")
         self.tableView.register(UINib(nibName: "SectionHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "SectionHeaderTableViewCell")
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.frame = CGRect(x: 0, y: 0, width: 366, height: 480)
-        self.tableView.backgroundColor = .white
-        self.tableView.layer.backgroundColor = UIColor(red: 0.967, green: 0.967, blue: 0.967, alpha: 1).cgColor
-        self.tableView.layer.cornerRadius = 10
+        self.tableView.separatorStyle = .none
         // Do any additional setup after loading the view.
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

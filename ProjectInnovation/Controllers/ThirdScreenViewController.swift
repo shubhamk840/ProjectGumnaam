@@ -17,7 +17,7 @@ class ThirdScreenViewController: UIViewController {
 
     @IBAction func btnClicked(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AssignedMeTaskViewController") as! AssignedMeTaskViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "TaskScreenViewController") as! TaskScreenViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
