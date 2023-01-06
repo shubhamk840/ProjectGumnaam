@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct DogsData: Decodable {
+struct CreateTaskResponse: Decodable {
     var message: String?
     var status: String?
     
     enum CodingKeys: String, CodingKey {
-        case message = "message"
-        case status = "status"
+        case message = "task-title"
+        case status = "statusDesc"
     }
 }

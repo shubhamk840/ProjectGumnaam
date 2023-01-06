@@ -16,27 +16,12 @@ class MainScreenViewController: UIViewController {
         refreshButton.layer.cornerRadius = 5
         imageView.layer.cornerRadius = 5
         imageView.isUserInteractionEnabled = false
-        makeApiCall()
     }
+   
     
-    func makeApiCall() {
-        SVProgressHUD.show(currentViewController: self)
-        let Services = Services(baseUrl: "https://dog.ceo/api/breeds/image/random")
-        Services.getAllCountriesName(endPoint: "",onSuccess: {
-            (dogsData) in
-            SVProgressHUD.dismiss(currentViewController: self)
-            let url = URL(string: dogsData.message ?? "")!
-            self.downloadImage(from: url)
-        }, onFailure : {
-            (error) in
-            self.imageView.image = UIImage(named:"errorImage")
-            SVProgressHUD.dismiss(currentViewController: self)
-            print(error)
-        })
-    }
+    
     
     @IBAction func refreshBtnClicked(_ sender: Any) {
-       makeApiCall()
     }
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()

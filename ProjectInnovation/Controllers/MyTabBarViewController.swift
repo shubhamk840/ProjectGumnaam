@@ -9,11 +9,41 @@ import UIKit
 
 class MyTabBarViewController: UITabBarController {
     
+    func setTabBarItems(){
+          
+        let myTabBarItem1 = (self.tabBar.items?[0])! as UITabBarItem
+          myTabBarItem1.image = UIImage(named: "HomeUn")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+          myTabBarItem1.selectedImage = UIImage(named: "HomeSe")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+          myTabBarItem1.title = "Home"
+//          myTabBarItem1.imageInsets = UIEdgeInsets(top: 20, left: 0, bottom: -20, right: 0)
+          
+          let myTabBarItem2 = (self.tabBar.items?[1])! as UITabBarItem
+        myTabBarItem2.image = UIImage(named: "PlusUn")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+          myTabBarItem2.selectedImage = UIImage(named: "PlusSe")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+          myTabBarItem2.title = "New Task"
+//          myTabBarItem2.imageInsets = UIEdgeInsets(top: 20, left: 0, bottom: -20, right: 0)
+          
+          
+          let myTabBarItem3 = (self.tabBar.items?[2])! as UITabBarItem
+          myTabBarItem3.image = UIImage(named: "DocumenSe")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+          myTabBarItem3.selectedImage = UIImage(named: "DocumentUn")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+          myTabBarItem3.title = "Tasks"
+//          myTabBarItem3.imageInsets = UIEdgeInsets(top: 20, left: 0, bottom: -20, right: 0)
+        
+          
+     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTabBarItems()
+        self.navigationItem.hidesBackButton = true;
+        self.tabBarController?.tabBar.isHidden = true
+        self.tabBarController?.tabBar.itemWidth = self.view.frame.size.width/8
+
         delegate = self
     }
 }
+
 
 
 extension MyTabBarViewController: UITabBarControllerDelegate {
@@ -79,3 +109,30 @@ class MyTransition: NSObject, UIViewControllerAnimatedTransitioning {
 }
 
 
+extension UIImage  {
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
+        let size = image.size
+        
+        let widthRatio  = targetSize.width  / size.width
+        let heightRatio = targetSize.height / size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(origin: .zero, size: newSize)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+}
